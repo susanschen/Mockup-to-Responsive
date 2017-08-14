@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90vw;
+    margin: 0 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Open Sans', sans-serif;
+    color: #2d3c49;
+    background-color: white;
+}
+
+.header {
+    width: 90vw;
+    margin: 2rem 0;
+    text-transform: uppercase;
+    border-bottom: 2px solid #7d97ad;
+    padding-bottom: 1rem;
+}
+
+.identity {
+    width: 90vw;
+}
+
+.identity_name {
+    font: 300 2.5rem/1 "Open Sans", sans-serif;
+    margin-bottom: .5rem;
+}
+
+.identity_title {
+    font: 400 1.2rem/1 "Open Sans", sans-serif;
+}
+
+.banner_img {
+    width: 90vw;
+}
+
+.featured_container {
+    /* 80 + (margin: 5*2) = 90vw, container width */
+    width: 80vw;
+    margin: 0 5vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.featured_work {
+    width: 80vw;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.featured_img {
+    width: 80vw;
+}
+
+.featured_h2 {
+    color: #7d97ad;
+    background-color: white;
+    padding: 1rem 0;
+}
+
+.featured_title {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+
+.featured_link {
+    text-decoration: none;
+    color: #2d3c49;
+    background-color: white;
+}
+
+.featured_text {
+    font-size: .85rem;
+}
+
+@media screen and (min-width: 501px) {
+    .header {
+        width: 90vw;
+        display: flex;
+    }
+
+    .logoBox {
+        width: 20vw;
+    }
+
+    .identity {
+        width: 70vw;
+        text-align: right;
+    }
+
+    .banner_img {
+        width: 90vw;
+    }
+
+    /*
+    Flexbox current options are either align left or justify space between items. For even number of items, both would work fine, but for odd number, the display is ugly. The following code aligns items to the left, shifts the margin to the right and increases the container width.
+    */
+    .featured_container {
+        /* 90vw + 4vw margin on last column*/
+        width: 94vw;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* 2 columns  */
+    .featured_work {
+        /* (94vw/2 = 47vw) - (4vw margin) */
+        width: 43vw;
+        /*
+        ideal margin: 1rem 2vw;
+        shift the margin to the right
+        */
+        margin: 1rem 4vw 1rem 0;
+    }
+
+    .featured_img {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .container {
+        width: 80vw;
+        margin: 0 10vw;
+    }
+
+    .header {
+        width: 80vw;
+    }
+
+    .logoBox {
+        width: 20vw;
+    }
+
+    .identity {
+        width: 60vw;
+    }
+
+    .banner_img {
+        width: 80vw;
+    }
+
+    /*
+    For multiples-of-3 number of items, normal flex display options works fine. But for non-multiples, the display is ugly. The following code aligns items to the left, shifts the margin to the right and increases the container width.
+    */
+    .featured_container {
+        /* 80vw + 3vw margin on last column*/
+        width: 83vw;
+    }
+
+    /* 3 columns */
+    .featured_work {
+        /* (83/3 = 27.6vw) - (margin) */
+        width: calc(27.6667vw - 3vw);
+        /*
+        ideal margin: 1rem 1vw;
+        2vw x 3columns = 6vw. With 2 gaps, that's 3vw.
+        shift the margin to the right
+        */
+        margin: 1rem 3vw 1rem 0;
+    }
+
+    .identity_name {
+        font-size: 3rem;
+    }
+
+    .identity_title {
+        font-size: 1.5rem;
+    }
+
+    .featured_h2 {
+        font-size: 2rem;
+    }
+
+    .featured_title {
+        font-size: 1.6rem;
+    }
+    .featured_text {
+        font-size: 1.2rem;
+    }
+}
