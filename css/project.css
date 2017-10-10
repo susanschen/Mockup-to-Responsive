@@ -24,6 +24,7 @@
 
 .identity {
   width: 90vw;
+  text-align: right;
 }
 
 .identity_name {
@@ -66,7 +67,7 @@
 
 .featured_title {
   text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .featured_link {
@@ -91,7 +92,7 @@
     width: 20vw;
   }
 
-  .identity {
+  #identity {
     width: 70vw;
     text-align: right;
   }
